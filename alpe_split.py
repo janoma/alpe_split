@@ -1,11 +1,11 @@
 import argparse
 import codecs
 import logging
+import os
 import re
 import socket
 import sys
 import time
-from os.path import expanduser
 
 class AlpeChecker:
     current_segment = 1
@@ -68,7 +68,8 @@ if __name__ == "__main__":
             type=int,
             help = 'The port of the server where the splits are notified.')
     parser.add_argument('--zwift_dir',
-            default = expanduser("~") + '\Documents\Zwift',
+            default = os.path.join(os.path.expanduser("~"), 'Documents',
+                'Zwift'),
             help = 'Location of the user\'s Zwift directory.')
     args = parser.parse_args()
     logging.debug(args)
@@ -81,7 +82,7 @@ if __name__ == "__main__":
                 + ". Did you start LiveSplit's server?")
         sys.exit(1)
 
-    log_path = args.zwift_dir + '\Logs\Log.txt'
+    log_path = os.path.join(args.zwift_dir, 'Logs', 'Log.txt')
     alpe_checker = AlpeChecker(split_socket, log_path)
     try:
         while True:
