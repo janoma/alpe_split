@@ -11,11 +11,11 @@ pace.
 
 ## Requirements
 
-* [Zwift](https://www.zwift.com/download) for Windows [LiveSplit]() with
-* [LiveSplit
-    server](https://github.com/LiveSplit/LiveSplit.Server)
-* [Python 3](https://www.python.org/downloads/windows/) The `alpe_split.py`
-* script.
+* [Zwift](https://www.zwift.com/download) for Windows
+* [LiveSplit]() with [LiveSplit
+server](https://github.com/LiveSplit/LiveSplit.Server)
+* [Python 3](https://www.python.org/downloads/windows/)
+* The `alpe_split.py` script.
 
 ## LiveSplit configuration
 
@@ -24,8 +24,11 @@ pace.
 You need to create a list of *splits* (or *segment times*) to load in LiveSplit,
 so that the whole thing becomes meaningful. The splits are simply:
 
-* Starting banner to hairpin 21 Hairpin 21 to hairpin 20 ...  Hairpin 2 to
-* hairpin 1 Hairpin 1 to finish banner
+* Starting banner to hairpin 21
+* Hairpin 21 to hairpin 20
+* ...
+* Hairpin 2 to hairpin 1
+* Hairpin 1 to finish banner
 
 A list of splits is saved in a file with extension `.lss`. You can download a
 [list with the
