@@ -71,3 +71,15 @@ segments and a predicted total time. Optionally, load the provided layout file.
 
 If this works well for a few testers, I'll see about creating an executable file
 so that users don't have to deal with the command line.
+
+## Caveats and comments
+
+* If you went up the Alpe du Zwift in your last ride, you might see many splits
+being marked immediately as taking 0 or 1 seconds. If that's the case, exit
+LiveSplit, open Zwift and open LiveSplit again once you're logged in to Zwift.
+That should clear the previous log file and you'd be ready for a fresh attempt.
+* This works for a single climb, so it won't reset if you start a second climb.
+Although that could be a nice improvement, especially for people who might want
+to pace multiple climbs, at this moment this is a proof of concept to see how
+well it works. We can try to make it better once a few people have used it
+successfully.
