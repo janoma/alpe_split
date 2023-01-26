@@ -37,12 +37,12 @@ class AlpeChecker:
                     logging.info("Alpe attempt started")
                     break
                 elif self.prev_timestamp is not None:
-                    # Note the typo in 'segmnet', taken verbatim from Zwift
-                    # logs. If it's fixed in the future, this will need an
-                    # update. Alpe segments have IDs from 2233445501 to
+                    # Zwift had a typo in the word "segment". Kept in
+                    # case they have an SCM hiccup and resurrect it.
+                    # Alpe segments have IDs from 2233445501 to
                     # 2233445522 (the last one being the finish banner).
                     segment_pattern = re.compile(
-                            "passed finish line of segmnet "
+                            "passed finish line of (segmnet|segment) "
                             + str(2233445500 + self.current_segment))
                     if segment_pattern.search(line):
                         logging.debug("Segment " + str(self.current_segment)
